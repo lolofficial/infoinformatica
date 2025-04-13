@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sito di informatica con informazioni, risorse e notizie sul mondo della tecnologia.">
+    <title>Info Informatica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Benvenuto nel Mondo dell'Informatica!</h1>
+            <nav>
+                <ul>
+                    <li><a href="#section1">Cos'è l'Informatica?</a></li>
+                    <li><a href="#section2">Risorse</a></li>
+                    <li><a href="#section3">Notizie</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="section1">
+        <div class="container">
+            <h2>Cos'è l'Informatica?</h2>
+            <p>L'informatica è il campo che studia l'elaborazione automatica dell'informazione mediante l'uso di dispositivi elettronici, come computer e reti.</p>
+        </div>
+    </section>
+
+    <section id="section2">
+        <div class="container">
+            <h2>Risorse</h2>
+            <p>Qui puoi trovare diverse risorse utili per imparare l'informatica:</p>
+            <ul>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a> - Tutorial su HTML, CSS, JavaScript e altro</li>
+                <li><a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a> - Impara a programmare gratuitamente</li>
+                <li><a href="https://www.geeksforgeeks.org" target="_blank">GeeksforGeeks</a> - Risorse per sviluppatori</li>
+                 <li><a href="https://www.kodland.org" target="_blank">KODLAND</a> - imparare corsi/li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="section3">
+        <div class="container">
+            <h2>Notizie del Settore</h2>
+            <p>Rimani aggiornato sulle ultime novità del mondo della tecnologia e dell'informatica!</p>
+            <button id="loadNewsBtn">Carica Notizie</button>
+            <div id="newsContainer"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Info Informatica. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('loadNewsBtn').addEventListener('click', function() {
+            // Simulazione di caricamento delle notizie
+            const newsContainer = document.getElementById('newsContainer');
+            newsContainer.innerHTML = '<p>Caricamento notizie...</p>';
+
+            setTimeout(() => {
+                newsContainer.innerHTML = `
+                    <h3>Ultime Notizie:</h3>
+                    <ul>
+                        <li><a href="https://www.techcrunch.com" target="_blank">TechCrunch: Nuove Innovazioni nell'IA</a></li>
+                        <li><a href="https://www.cnet.com" target="_blank">CNET: L'industria dei semiconduttori in crescita</a></li>
+                        <li><a href="https://www.theverge.com" target="_blank">The Verge: La rivoluzione delle auto a guida autonoma</a></li>
+                    </ul>
+                `;
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>
